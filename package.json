@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "whys-scripts": "^3.2.0"
+  },
+  "name": "",
+  "version": "",
+  "whys-scripts": {
+    "src": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "projectType": "node-library",
+    "enable": {
+      "typescript": true
+    }
+  },
+  "scripts": {
+    "test": "whys-scripts test",
+    "type-check": "tsc",
+    "check:all": "whys-scripts lint && npm run test && npm run type-check",
+    "pre-commit": "whys-scripts format --staged --add",
+    "pre-push": "whys-scripts lint --changed"
+  }
+}
