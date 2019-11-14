@@ -7,5 +7,5 @@ export function isDateValid(d: Date): boolean {
   // > d.getTime()
   // NaN
   // >
-  return Number.isNaN(d.getTime());
+  return !Number.isNaN(d.getTime());
 }
