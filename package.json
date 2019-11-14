@@ -16,6 +16,7 @@
   },
   "scripts": {
     "test": "whys-scripts test",
+    "test:ci": "whys-scripts test --coverage",
     "type-check": "tsc",
     "check:all": "whys-scripts lint && npm run test && npm run type-check",
     "pre-commit": "whys-scripts format --staged --add",
