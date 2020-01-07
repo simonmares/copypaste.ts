@@ -15,6 +15,7 @@
     }
   },
   "scripts": {
+    "dev": "whys-scripts test --watch",
     "test": "whys-scripts test",
     "test:ci": "whys-scripts test --coverage",
     "type-check": "tsc",
