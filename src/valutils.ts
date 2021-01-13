@@ -29,3 +29,7 @@ export function coerceStr(val: unknown, defaultVal: string = ''): string {
   }
   return defaultVal;
 }
+
+export function isValidNumber(val: unknown): val is number {
+  return typeof val === 'number' && !Number.isNaN(val);
+}

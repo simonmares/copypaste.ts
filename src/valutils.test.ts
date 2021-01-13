@@ -28,3 +28,15 @@ test('coerceStr', () => {
   expect(coerceStr({}, 'defaultStr')).toEqual('defaultStr');
   expect(coerceStr({})).toEqual('');
 });
+
+test('isValidNumber', () => {
+  const { isValidNumber } = unit;
+  // ok
+  expect(isValidNumber(111)).toEqual(true);
+  expect(isValidNumber(1.11)).toEqual(true);
+  // err
+  expect(isValidNumber('111')).toEqual(false);
+  expect(isValidNumber('1.11')).toEqual(false);
+  expect(isValidNumber(null)).toEqual(false);
+  expect(isValidNumber(undefined)).toEqual(false);
+});
